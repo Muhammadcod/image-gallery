@@ -1,12 +1,8 @@
 <template>
-  <div class="home">
+  <div class="home border">
     <div class="container-fluid header">
       <div class="search-bar">
-        <input
-          v-model="query"
-          v-on:keyup.enter="goToSearchPage(query)"
-          placeholder="Enter Search"
-        />
+        <h1>Searching for "{{ $route.query?.q }}"</h1>
       </div>
     </div>
     <div class="container" :style="{ marginTop: '-50px' }">
@@ -25,26 +21,15 @@
 import ImageContainer from '@/components/ImageContainer'
 
 export default {
-  name: 'Home',
-  data: function () {
-    return {
-      query: ''
-    }
-  },
+  name: 'Result',
   props: {
     imageList: Array,
+    dummyList: Array,
     loading: Boolean,
-    fetchData: Function,
-    goToSearchPage: Function
+    searchQuery: String
   },
   components: {
     ImageContainer
   }
 }
 </script>
-
-<style lang="scss">
-.home {
-  min-height: 100vh;
-}
-</style>

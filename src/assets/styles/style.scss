@@ -1,7 +1,12 @@
 // Configuration and helpers
 @import '_variables.scss';
+@import '_root';
 
+// Global
+@import '_global.scss';
 
 //Components
-@import "components/_skeleton-element";
-@import "components/_shimmer";
+@import "components/_search-bar";
+@import "components/_image";
+
+@import "_utility.scss";
