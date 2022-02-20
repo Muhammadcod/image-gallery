@@ -6,16 +6,20 @@
           v-model="query"
           v-on:keyup.enter="goToSearchPage(query)"
           placeholder="Enter Search"
+          class="search-string"
         />
       </div>
     </div>
     <div class="container" :style="{ marginTop: '-50px' }">
       <div class="grid">
-        <ImageContainer
-          v-for="item in imageList"
-          v-bind:key="item.id"
-          :item="item"
-        />
+        <div v-if="loading">Loading...</div>
+        <template v-else>
+          <ImageContainer
+            v-for="item in imageList"
+            v-bind:key="item.id"
+            :item="item"
+          />
+        </template>
       </div>
     </div>
   </div>

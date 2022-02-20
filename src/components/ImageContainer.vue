@@ -11,7 +11,6 @@
         :src="item?.urls?.thumb"
       />
       <img
-        @load="setLoad"
         class="image__item full"
         :alt="item?.alt_description"
       />
@@ -36,13 +35,6 @@ export default {
       const ratio = (this.item.height / this.item.width) * 278
       return `${ratio}px`
     }
-  },
-  methods: {
-    setLoad () {
-      this.isLoaded = true
-    }
   }
 }
 </script>
-
-<style lang="scss"></style>

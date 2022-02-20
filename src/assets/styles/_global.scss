@@ -22,6 +22,8 @@ body {
 .grid {
   columns: $columns;
   gap: $gap;
+  grid-auto-flow: dense;
+
 
   > * {
     break-inside: avoid;
