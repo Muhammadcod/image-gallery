@@ -32,7 +32,7 @@ export default {
         .getPhotos({
           query: q || 'Africa',
           page: 1,
-          perPage: 8,
+          perPage: 12,
           orientation: 'portrait'
         })
         .then((result) => {

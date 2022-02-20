@@ -8,7 +8,7 @@ export default {
         imageElement[1].addEventListener('load', () => {
           // eslint-disable-next-line no-return-assign
           setTimeout(() => imageElement[0].style.visibility = 'hidden',
-            200)
+            300)
         })
         imageElement[1].addEventListener('error', () => console.log('error'))
         imageElement[1].src = binding?.value
