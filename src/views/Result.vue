@@ -2,7 +2,8 @@
   <div class="home border">
     <div class="container-fluid header">
       <div class="search-bar">
-        <h1>Searching for "{{ $route.query?.q }}"</h1>
+        <h1 v-if="loading">Searching for "{{ $route.query?.q }}"</h1>
+        <h1 v-else>Result for "{{ $route.query?.q }}"</h1>
       </div>
     </div>
     <div class="container" :style="{ marginTop: '-50px' }">
