@@ -13,6 +13,7 @@
       <img
         class="image__item full"
         :alt="item?.alt_description"
+        src=""
       />
       <div class="image-info border">
         <p class="author">{{ item.user?.name }}</p>
